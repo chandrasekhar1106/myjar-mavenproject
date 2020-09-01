@@ -92,7 +92,7 @@
                 <goal>upload-single</goal>
               </goals>
               <configuration>
-                <fromFile>${project.build.directory}/${project.build.finalName}.war</fromFile>
+                <fromFile>${project.build.directory}/${project.build.finalName}.jar</fromFile>
                 <url>scp://192.168.1.6/opt</url>
               </configuration>
             </execution>
