@@ -1,17 +1,8 @@
-def buildApp() {
-	sh 'mvn validate'
+def packageApp() {
+	sh 'mvn package'
 }
-
-def compileApp() {
-	sh 'mvn compile'
-}
-
-def testApp() {
-	sh 'mvn test'
-}
-
 def installApp() {
-	sh 'mvn install'
+	echo 'Installation stage is not necessary now'
 }
 
 def deployApp() {
