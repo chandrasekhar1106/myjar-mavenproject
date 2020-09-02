@@ -23,6 +23,14 @@ pipeline {
 			}
 		}
 		
+		stage("compile") {
+			steps {
+				script {
+					gv.compileApp()
+				}
+			}
+		}
+		
 		stage("test") {
 			steps {
 				script {
