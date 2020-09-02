@@ -58,16 +58,7 @@ pipeline {
 	post {
 		always {
 			//Use this for always scenario...
-		}
-		
-		success {
-			stages {
-				stage ("Email Notification") {
-					steps {
-						mail bcc: '', body: 'Jenkins pipeline is done successfully.', cc: '', from: 'chandraganimisetty@gmail.com', replyTo: '', subject: 'Jenkins Pipeline sent this mail', to: 'sekharchandra2108@gmail.com'
-					}
-				}
-			}
+			mail bcc: '', body: 'Jenkins pipeline is done successfully.', cc: '', from: 'chandraganimisetty@gmail.com', replyTo: '', subject: 'Jenkins Pipeline sent this mail', to: 'sekharchandra2108@gmail.com'
 		}
 	}
 }
