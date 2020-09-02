@@ -56,9 +56,9 @@ pipeline {
 		}
 	}
 	post {
-		always {
-			//Use this for always scenario...
-			mail bcc: '', body: 'Jenkins pipeline is done successfully.', cc: '', from: 'chandraganimisetty@gmail.com', replyTo: '', subject: 'Jenkins Pipeline sent this mail', to: 'sekharchandra2108@gmail.com'
+		failure {
+			//Use this for failure scenario...
+			mail bcc: '', body: 'Jenkins pipeline is failed.', cc: '', from: 'chandraganimisetty@gmail.com', replyTo: '', subject: 'Jenkins Pipeline sent this mail', to: 'sekharchandra2108@gmail.com'
 		}
 	}
 }
