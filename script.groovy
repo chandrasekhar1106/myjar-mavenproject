@@ -1,5 +1,5 @@
 def buildApp() {
-	echo 'Building the Application'
+	sh 'mvn validate'
 }
 
 def testApp() {
