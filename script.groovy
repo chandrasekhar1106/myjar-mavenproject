@@ -2,15 +2,19 @@ def buildApp() {
 	sh 'mvn validate'
 }
 
+def compileApp() {
+	sh 'mvn compile'
+}
+
 def testApp() {
-	echo 'Testing the Application..'
+	sh 'mvn test'
 }
 
 def installApp() {
-	echo 'Installing the Application..'
+	sh 'mvn install'
 }
 
 def deployApp() {
-	echo 'Deploying the application..'
+	echo 'Deploy credentials need to update'
 }
 return this
