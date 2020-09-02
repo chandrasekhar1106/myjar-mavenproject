@@ -1,3 +1,3 @@
-def buildApp {
+def buildApp() {
 	echo 'Building the Application'
 }
