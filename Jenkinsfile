@@ -14,37 +14,21 @@ pipeline {
 				}
 			}
 		}
-				
+		
 		stage("SCM Checkout") {
 			steps {
 				git 'https://github.com/chandrasekhar1106/myjar-mavenproject.git'
 			}
 		}
 		
-		stage("build") {
+		stage("package") {
 			steps {
 				script {
-					gv.buildApp()
+					gv.packageApp()
 				}
 			}
 		}
-		
-		stage("compile") {
-			steps {
-				script {
-					gv.compileApp()
-				}
-			}
-		}
-		
-		stage("test") {
-			steps {
-				script {
-					gv.testApp()
-				}
-			}
-		}
-		
+
 		stage("install") {
 			steps {
 				script {
@@ -63,8 +47,8 @@ pipeline {
 	}
 	post {
 		failure {
-			//Use this for failure scenario...
-			mail bcc: '', body: 'Jenkins pipeline is failed.', cc: '', from: 'chandraganimisetty@gmail.com', replyTo: '', subject: 'Jenkins Pipeline sent this mail', to: 'sekharchandra2108@gmail.com'
+			//Use this for always scenario...
+			mail bcc: '', body: 'Jenkins pipeline is done successfully.', cc: '', from: 'chandraganimisetty@gmail.com', replyTo: '', subject: 'Jenkins Pipeline sent this mail', to: 'sekharchandra2108@gmail.com'
 		}
 	}
 }
