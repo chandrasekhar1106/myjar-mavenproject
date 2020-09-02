@@ -14,6 +14,12 @@ pipeline {
 				}
 			}
 		}
+				
+		stage("SCM Checkout") {
+			steps {
+				git 'https://github.com/chandrasekhar1106/myjar-mavenproject.git'
+			}
+		}
 		
 		stage("build") {
 			steps {
