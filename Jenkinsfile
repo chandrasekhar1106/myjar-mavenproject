@@ -19,5 +19,29 @@ pipeline {
 				}
 			}
 		}
+		
+		stage("test") {
+			steps {
+				script {
+					gv.testApp()
+				}
+			}
+		}
+		
+		stage("install") {
+			steps {
+				script {
+					gv.installApp()
+				}
+			}
+		}
+		
+		stage("deploy") {
+			steps {
+				script {
+					gv.deployApp()
+				}
+			}
+		}
 	}
 }
